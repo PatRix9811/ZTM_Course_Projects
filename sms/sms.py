@@ -1,13 +1,13 @@
 from twilio.rest import Client 
  
-account_sid = 'AC0ef5536469e7f296a9a5b1eee2957d9a' 
-auth_token = '30cb86553c6f650d6b79472efebf94c7' 
+account_sid = 'twilio`s account id' 
+auth_token = 'authentication token from twilio' 
 client = Client(account_sid, auth_token) 
  
 message = client.messages.create( 
-                              from_='+18317776915',  
+                              from_='twilio`s number',  
                               body='Twilio message from python script :p',      
-                              to='+48724666357' 
+                              to='phone number' 
                           ) 
  
 print(message.sid)
